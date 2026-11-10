@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bạn hợp với điểm đến nào ở Việt Nam?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-text">
+      <span class="hero-badge">Khám phá Việt Nam</span>
+      <p class="hero-title">Hành trình của bạn</p>
+    </div>
+
+    <svg class="hero-art" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+      <circle class="sun" cx="1120" cy="80" r="46"/>
+      <path class="bird" d="M200 60 q12 -14 24 0 q12 -14 24 0" />
+      <path class="bird" d="M270 90 q9 -10 18 0 q9 -10 18 0" />
+      <path class="mountain m1" d="M0 220 L0 140 L120 70 L220 130 L340 40 L480 140 L600 90 L720 150 L860 60 L980 140 L1100 100 L1240 160 L1340 110 L1440 150 L1440 220 Z"/>
+      <path class="mountain m2" d="M0 220 L0 170 L160 120 L300 170 L460 110 L620 170 L780 130 L940 180 L1100 130 L1260 180 L1440 140 L1440 220 Z"/>
+      <path class="wave w1" d="M0 190 Q90 170 180 190 T360 190 T540 190 T720 190 T900 190 T1080 190 T1260 190 T1440 190 L1440 220 L0 220 Z"/>
+      <path class="wave w2" d="M0 205 Q120 190 240 205 T480 205 T720 205 T960 205 T1200 205 T1440 205 L1440 220 L0 220 Z"/>
+    </svg>
+  </header>
+
+  <main class="container">
+
+    <section id="screen-start" class="card screen active">
+      <h1>Bạn hợp với điểm đến nào ở Việt Nam?</h1>
+      <p class="lead">Trả lời 10 câu hỏi ngắn để khám phá phong cách du lịch của bạn và nhận gợi ý điểm đến phù hợp nhất.</p>
+
+      <div class="style-chips">
+        <div class="chip chip-bien"><span class="chip-icon">🌊</span><span>Biển đảo</span></div>
+        <div class="chip chip-nui"><span class="chip-icon">⛰️</span><span>Núi rừng</span></div>
+        <div class="chip chip-disan"><span class="chip-icon">🏮</span><span>Văn hóa - Di sản</span></div>
+        <div class="chip chip-dalat"><span class="chip-icon">🌲</span><span>Thư giãn - Lãng mạn</span></div>
+      </div>
+
+      <ul class="hint">
+        <li>10 câu hỏi trắc nghiệm</li>
+        <li>Có câu chọn 1 đáp án, câu chọn nhiều đáp án và câu chọn bằng hình ảnh</li>
+        <li>Không có đáp án đúng hay sai, hãy chọn theo sở thích thật của bạn</li>
+      </ul>
+      <button id="btn-start" class="btn primary big">Bắt đầu hành trình</button>
+    </section>
+
+    <section id="screen-quiz" class="card screen">
+      <div class="progress-wrap">
+        <div class="progress-text" id="progress-text">Câu 1/10</div>
+        <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+      </div>
+      <h2 id="question-text"></h2>
+      <p class="note" id="question-note"></p>
+      <div id="options" class="options"></div>
+      <div class="nav">
+        <button id="btn-prev" class="btn ghost">Quay lại</button>
+        <button id="btn-next" class="btn primary" disabled>Tiếp theo</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="card screen">
+      <p class="result-label">Kết quả của bạn</p>
+      <h2 id="result-title"></h2>
+      <img id="result-image" class="result-image" alt="">
+      <p id="result-desc" class="result-desc"></p>
+      <div class="places">
+        <h3>Địa điểm gợi ý</h3>
+        <ul id="result-places"></ul>
+      </div>
+      <div class="breakdown">
+        <h3>Mức độ phù hợp với từng phong cách</h3>
+        <div id="result-bars"></div>
+      </div>
+      <button id="btn-restart" class="btn primary big">Làm lại bài trắc nghiệm</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <p>Trắc nghiệm du lịch Việt Nam</p>
+  </footer>
+
+  <script src="../java/java.js"></script>
+</body>
+</html>
